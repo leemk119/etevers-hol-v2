@@ -26,6 +26,7 @@ terraform.tfstate.backup
 backup
 .terraform
 state
+backup
 # terraform.tfvars
 
 # .tfstate files
