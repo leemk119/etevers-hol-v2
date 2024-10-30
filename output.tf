@@ -12,17 +12,17 @@ output "nat_gateway_public_ip" {
 }
 
 ## 3-phase 배포시 주석 제거 ##
-# # ALB DNS 이름 출력
-# output "alb_dns_name" {
-#   description = "DNS name of the Application Load Balancer"
-#   value       = aws_lb.prod_alb.dns_name
-# }
-
-## 4-phase 배포시 주석 제거 ##
 # # 웹 서버 인스턴스 ID 출력
 # output "web_instance_ids" {
 #   description = "IDs of the web server instances"
 #   value       = aws_instance.web[*].id
+# }
+
+## 4-phase 배포시 주석 제거 ##
+# # ALB DNS 이름 출력
+# output "alb_dns_name" {
+#   description = "DNS name of the Application Load Balancer"
+#   value       = aws_lb.prod_alb.dns_name
 # }
 
 ## 5-phase 배포시 주석 제거 ##
