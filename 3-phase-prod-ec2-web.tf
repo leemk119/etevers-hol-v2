@@ -11,11 +11,11 @@
 #   # 사용자 데이터 스크립트 사용
 #   user_data = <<-EOF
 #               #!/bin/bash
-#               sudo yum update -y
-#               sudo yum install httpd -y
+#               sudo dnf update -y
+#               sudo dnf install httpd -y
 #               sudo systemctl start httpd
 #               sudo systemctl enable httpd
-#               echo "<html><body><h1>Hello, ETEVERS IaC HoL!</h1></body></html>" | sudo tee /var/www/html/index.html
+#               echo "<html><body><h1>Hello, ETEVERS IaC HoL!</h1></body></html>" | sudo tee /usr/share/httpd/noindex/index.html
 #               EOF
 
 #   tags = {
