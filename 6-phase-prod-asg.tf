@@ -40,8 +40,8 @@
 #   metric_name         = "CPUUtilization"
 #   namespace           = "AWS/EC2"
 #   period              = "120"
-#   statistic           = "Average"
-#   threshold           = "70"
+#   statistic           = "Maximum"
+#   threshold           = "50"
 
 #   dimensions = {
 #     AutoScalingGroupName = aws_autoscaling_group.prod_web_asg.name
@@ -68,7 +68,7 @@
 #   metric_name         = "CPUUtilization"
 #   namespace           = "AWS/EC2"
 #   period              = "120"
-#   statistic           = "Average"
+#   statistic           = "Maximum"
 #   threshold           = "30"
 
 #   dimensions = {
