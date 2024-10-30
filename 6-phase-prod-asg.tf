@@ -5,9 +5,9 @@
 #   target_group_arns   = [aws_lb_target_group.prod_alb_tg.arn]
 #   health_check_type   = "ELB"
 
-#   min_size         = 1
 #   max_size         = 3
-#   desired_capacity = 2
+#   min_size         = 1
+#   desired_capacity = 1
 
 #   # Launch Template 연결
 #   launch_template {

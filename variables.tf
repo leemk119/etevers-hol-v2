@@ -36,7 +36,7 @@ variable "ec2_instance_type" {
 # EC2 AMI ID 설정
 variable "ec2_ami" {
   description = "AMI ID for EC2 instances"
-  default     = "ami-02c329a4b4aba6a48"  # Amazon Linux 2023 AMI
+  default     = "ami-08b09b6acd8d62254"  # Amazon Linux 2 AMI
 }
 
 # EC2 키 페어 이름 설정

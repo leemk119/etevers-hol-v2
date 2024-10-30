@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #Install a LAMP stack
-dnf install -y httpd wget php-fpm php-mysqli php-json php php-devel
-dnf install -y mariadb105-server
-dnf install -y httpd php-mbstring
+yum install -y httpd wget php-fpm php-mysqli php-json php php-devel
+yum install -y mariadb105-server
+yum install -y httpd php-mbstring
 
 #Start the web server
 chkconfig httpd on
@@ -26,4 +26,4 @@ if [ ! -f /var/www/html/aws.zip ]; then
 fi
 
 # Update existing packages
-dnf update -y
+yum update -y
