@@ -22,7 +22,7 @@
 #   tag_specifications {
 #     resource_type = "instance"
 #     tags = {
-#       Name = "prod-web-instance"
+#       Name = "prod-LT-instance"
 #     }
 #   }
 # }

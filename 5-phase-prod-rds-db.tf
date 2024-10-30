@@ -13,6 +13,7 @@
 
 #   vpc_security_group_ids = [aws_security_group.db_sg.id]
 #   db_subnet_group_name   = aws_db_subnet_group.prod_db_subnet_group.name
+#   parameter_group_name   = aws_db_parameter_group.prod_db_pg.name
 
 #   multi_az               = true
 #   skip_final_snapshot    = true
