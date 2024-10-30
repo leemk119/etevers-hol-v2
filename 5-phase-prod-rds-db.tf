@@ -48,52 +48,6 @@ resource "aws_db_parameter_group" "prod_db_pg" {
     value = "utf8mb4_unicode_ci"  # 유니코드 대소문자 구분 없는 정렬
   }
 
-  # 성능 최적화 설정
-  parameter {
-    name  = "innodb_buffer_pool_size"
-    value = "{DBInstanceClassMemory*3/4}"  # 인스턴스 메모리의 75%를 InnoDB 버퍼 풀로 설정
-  }
-  parameter {
-    name  = "max_connections"
-    value = "1000"  # 최대 동시 연결 수 증가
-  }
-  parameter {
-    name  = "innodb_file_per_table"
-    value = "1"  # 각 테이블을 별도의 파일로 저장 (관리 용이성 증가)
-  }
-  parameter {
-    name  = "innodb_flush_log_at_trx_commit"
-    value = "2"  # 성능과 안정성의 균형 (1: 가장 안전, 2: 절충, 0: 가장 빠름)
-  }
-
-  # 슬로우 쿼리 로그 설정
-  parameter {
-    name  = "slow_query_log"
-    value = "1"  # 슬로우 쿼리 로깅 활성화
-  }
-  parameter {
-    name  = "long_query_time"
-    value = "2"  # 2초 이상 걸리는 쿼리를 슬로우 쿼리로 기록
-  }
-
-  # 시간대 설정
-  parameter {
-    name  = "time_zone"
-    value = "Asia/Seoul"  # 한국 시간대로 설정
-  }
-
-  # 보안 관련 설정
-  parameter {
-    name  = "max_allowed_packet"
-    value = "64194304"  # 최대 패킷 크기 64MB로 설정
-  }
-
-  # 트랜잭션 격리 수준 설정
-  parameter {
-    name  = "transaction_isolation"
-    value = "READ-COMMITTED"  # 일반적인 애플리케이션에 적합한 격리 수준
-  }
-
   tags = {
     Name = "prod-db-parameter-group"  # 리소스 태그 설정
   }
