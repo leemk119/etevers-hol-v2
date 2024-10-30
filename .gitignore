@@ -63,7 +63,7 @@ terraform.rc
 .terraform
 .terraform.lock.hcl
 terraform.tfstate.backup
-terrafrom.tfstate
+# terrafrom.tfstate
 backup
 
 ### VisualStudioCode ###
